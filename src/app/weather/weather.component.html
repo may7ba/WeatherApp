@@ -1,0 +1,48 @@
+<div class="row">
+<div class="col-lg-6 col-md-6 col-sm-6">
+<div class = "panel panel-primary">
+  <div class = "panel-heading">
+<h3>
+  Weather App!
+</h3>
+</div>
+<div class = "panel-body">
+
+
+    <div class="input-group">
+  <input type="text" style="width:250px;" class="form-control" placeholder="Enter city name" [(ngModel)]="val" />
+  <input type="text" style="width:250px;" class="form-control" placeholder="Enter country/state name" [(ngModel)]="coun" />
+<button class="btn btn-secondary" type="button"  (click)="getWeather(val,coun)"(click)="getMap(val)">Submit</button>
+
+
+
+</div>
+    <div  class="pull-right">
+    <iframe width="300" height="225" frameborder="0" style="border:0" [src]="url" allowfullscreen> </iframe>
+    </div>
+<p>City: {{city}}<p>
+<p>Temperature: {{temp}}</p>
+<p>Description: {{desc}}  <img src={{icon}}/></p>
+<p>Current Time: {{currentTime}}</p>
+   </div>
+ </div>
+ </div>
+ <div class="col-lg-6 col-md-6 col-sm-6">
+ <div class = "panel panel-primary">
+   <div class = "panel-heading">
+ <h3>
+   Local Weather
+ </h3>
+ </div>
+ <div class = "panel-body">
+<div  class="pull-right">
+     <iframe width="350" height="225" frameborder="0" style="border:0" [src]="urlLocal" allowfullscreen> </iframe>
+     </div>
+ <p>City: {{cityCurrent}}<p>
+ <p>Temperature: {{tempCurrent}}</p>
+ <p>Description: {{descCurrent}}  <img src={{icon}}/></p>
+ <p>Current Time: {{currentTimeCurrent}}</p>
+    </div>
+  </div>
+</div>
+</div>
